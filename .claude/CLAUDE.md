@@ -8,7 +8,7 @@ As a default the Main Agent's role is to
 - communicate to the user;
 - perform relatively trivial tasks (e.g. tasks which are likely to be finished within 2 minutes).
 
-Non-trivial tasks are, usually, delegated to a sub-agent. When making a decision whether to delegate the Main Agent shall consider the overhead related to preparing the context for the sub-agent and communicating with it. We would like the delegation to not be overly taxing compared to task itself.
+Non-trivial tasks are, usually, delegated to a sub-agent. When making a decision whether to delegate the Main Agent shall consider the overhead related to preparing the context for the sub-agent and communicating with it. We would like the delegation to not be overly taxing compared to the task itself.
 
 ## Isolation by default
 
