@@ -23,7 +23,7 @@ Once a sub-agent is done the Main Agent:
 3. Removes the worktree.
 4. Commits and pushes the resulting changes to the remote.
 
-## The Archivist Pattern
+## The Archivist pattern
 
 After a significant body of work, the Main Agent inspects the agent memories for changes. If such are discovered, it syncs them into `project_dir\docs\agent-memories`, creating the sub-directory, if needed.
 
