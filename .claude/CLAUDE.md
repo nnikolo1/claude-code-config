@@ -43,3 +43,8 @@ diagnose problems after the fact.
 Use the language/framework's appropriate logging facility rather than ad-hoc print statements for application logging.
 
 Avoid both silent failure and excessive/noisy logging. Trivial one-off scripts and throwaway exploratory code are exempt. Never log sensitive data here either.
+
+## Re-usability and Reproducability
+
+When an investigative question is likely to come up more than once in a project, write it as a small, documented, argument-driven script rather than an
+inline one-off snippet.
