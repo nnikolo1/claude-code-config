@@ -12,16 +12,16 @@ Non-trivial tasks are, usually, delegated to a sub-agent. When making a decision
 
 ## Isolation by default
 
-If a sub-agent works on a task which is likely to affect the codebase it does so in a separate work-tree, in a suitably named branch, and commits there.
+If a sub-agent works on a task which is likely to affect the codebase it does so in a separate worktree, in a suitably named branch, and commits there.
 
 ## Manager - Janitor pattern
 
 Once a sub-agent is done the Main Agent:
 
 1. Does a quick review to check whether the result conforms to the specified task.
-2. If yes, it merges any code changes into the main branch.
-3. Removes the worktree after confirming nothing uncommitted or unmerged would be lost.
-4. Commits and pushes the resulting changes to the remote.
+2. If it isn't it either interacts with the sub-agent, or, if a quick fix is possible, fixes it. If/once the work done is acceptable, it merges any code changes into the main branch.
+4. Removes the worktree after confirming nothing uncommitted or unmerged would be lost.
+5. Commits and pushes the resulting changes to the remote.
 
 ## The Considerate Archivist pattern
 
@@ -42,4 +42,4 @@ diagnose problems after the fact.
 
 Use the language/framework's appropriate logging facility rather than ad-hoc print statements for application logging.
 
-Avoid both silent failure and excessive/noisy logging. Trivial one-off scripts and throwaway exploratory code are exempt. No `sensitive` data (e.g. credentials) is imperative here, too.
+Avoid both silent failure and excessive/noisy logging. Trivial one-off scripts and throwaway exploratory code are exempt. "No sensitive data" (e.g. credentials) is imperative here, too.
