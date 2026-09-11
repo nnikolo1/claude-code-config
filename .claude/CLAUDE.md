@@ -29,9 +29,9 @@ The (sub-)agent memories record, among others, problems encountered, design choi
 
 The memories also record info about the user. These may include not just personal code styling or architectural preferences (some of which may be a valid project artefact) but also details which are less likely to be in scope (e.g. user role within the organisation). These memories are, usually, tagged as `type: user`. The Main Agent shall exercise judgment whether a particular memory shall constitute part of the *official* project documentation. This applies not just to the individual memory files but, also, to the memory index (MEMORY.md). No sensitive data (e.g. secrets, credentials, PII) shall leak into the git repo.
 
-After a significant body of work, the Main Agent shall inspect the agent memories for any new entries or changes. If such are discovered, and are considered eligible to be included in the `official` project documentation, it syncs them into `project_dir/docs/agent-memories`, creating the sub-directory, if needed.
+After a significant body of work, the Main Agent shall inspect the agent memories for any new entries or changes. If such are discovered, and are considered eligible to be included in the `official` project documentation, it archives them into `project_dir/docs/agent-memories`, creating the sub-directory, if needed.
 
-The default memory path set up by the harness remains canonical - the agent shall consult in its work only the memories stored there. The directory mentioned here is the canonical `git repo path` for the memories which are *eligible* to enter the project documentation. It is thus a partial, and *sanitized*, mirror of the agent memories. The commit message shall provide a brief summary of the newly persisted memories. 
+The default native memory location remains canonical for agent use: the agent shall consult in its work only the memories stored there. The directory mentioned here is the canonical `git repo path` for the memories which are *eligible* to enter the project documentation. It is thus a partial, and *sanitized*, mirror of the agent memories. The commit message shall provide a brief summary of the newly persisted memories. 
    
 ## Logging by default
 
